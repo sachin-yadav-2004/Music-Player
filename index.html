@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SharpVani</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="navbar flex">
+      <div class="logo flex">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#fc08fc" width="45" viewBox="0 0 24 24">
+          <path fill-rule="evenodd"
+            d="M19.952 1.651a.75.75 0 0 1 .298.599V16.303a3 3 0 0 1-2.176 2.884l-1.32.377a2.553 2.553 0 1 1-1.403-4.909l2.311-.66a1.5 1.5 0 0 0 1.088-1.442V6.994l-9 2.572v9.737a3 3 0 0 1-2.176 2.884l-1.32.377a2.553 2.553 0 1 1-1.402-4.909l2.31-.66a1.5 1.5 0 0 0 1.088-1.442V5.25a.75.75 0 0 1 .544-.721l10.5-3a.75.75 0 0 1 .658.122Z"
+            clip-rule="evenodd" />
+        </svg>
+
+        <span class="logoText"> Sharp</span><span class="logoMusicColor">Vaani</span>
+      </div>
+
+
+      <button class="threeLine">
+        <div class="lines"></div>
+        <div class="lines"></div>
+        <div class="lines"></div>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN SECTION -->
+  <section class="main flex">
+
+    <!-- LEFT MUSIC PLAYER -->
+    <div class="music-player radius flex music-bgc">
+
+
+      <!-- PLAYER CARD -->
+      <div class="music-card">
+
+        <!-- CLEAR SONG IMAGE -->
+        <div class="song-cover">
+          <img id="coverImage" width="150px" src="/images/disk.png" alt="song cover" />
+        </div>
+        <div>
+
+
+
+        </div>
+
+        <h2 class="song-title"></h2>
+        <p class="song-meta"> – </p>
+        <div>
+        </div>
+        <div class="progress-wrapper flex">
+          <button class="icon-btn">
+            <div class="volumeBTN"> </div>
+          </button>
+          <span id="currentTime">0:00</span>
+          <input type="range" class="seekbar" value="0" />
+          <span id="duration">0:00</span>
+          <button class="icon-btn">
+            <div class="volumebar"> <input width="20px" type="range" min="0" max="100" value="100"></div>
+          </button>
+        </div>
+
+        <div class="controls flex">
+          <button class="icon-btn">⏮</button>
+          <button id="playPause" class="play-btn">▶</button>
+          <button class="icon-btn">⏭</button>
+        </div>
+
+        <!-- AUDIO -->
+        <audio id="audio"></audio>
+
+
+      </div>
+    </div>
+    <div class="right radius">
+      <div class="playlist-header flex">
+        <h2>Playlist</h2>
+        <div class="search-song flex">
+          <input type="text" placeholder="Search for artist or songs......" />
+        </div>
+      </div>
+      <div class="song-list radius mt flex">
+
+        <div class="playlist-container">
+          <div class="elements flex">
+
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </section>
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
